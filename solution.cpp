@@ -175,10 +175,8 @@ vector<pair<char, int> > findWay()
     queue<pii> q;
     q.push(mp(droidX, droidY));
 
-    int counter = 0;
     while (!q.empty())
     {
-     cout<<counter++<<endl;
         p = q.front();
         q.pop();
         int x = p.first;
@@ -232,35 +230,13 @@ int main()
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    // LL a[110];
-    // memset(a,0,sizeof(a));
-
-    //freopen("input.txt","r",stdin);
-    //freopen("output.txt","w",stdout);
-    //cout<<fixed;
-    //cout<<setprecision(9);
-
-
     read("secret.txt");
     vector<pair<char, int> > way = findWay();
 
-    cout<<"sfsfsfsd"<<endl;
+    cout<<"way:"<<endl;
     for (int i = 0; i <  way.size(); i++)
         cout<<way[i].first<<" "<<way[i].second<<endl;
 
-    /*
-    ofstream out("output.txt");
-
-    for (int i = 1; i <= linesNum; i++)
-    {
-        for (int j = 1; j <= rowsNum; j++)
-        {
-            out<<maze[i][j];
-        }
-        out<<endl;
-    }
-
-*/
 
     return 0;
 }
